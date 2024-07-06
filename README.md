@@ -7,7 +7,7 @@ Hey guys, y'all can call me "pad1" or "ryoshi" or "pad1ryoshi" and I'm a aspirin
 
 
 ## >_This repository
-This repository will serve as a way to showcase my scripts - using existing tools - in bash in order to automate some processes. I prefer to do processes manually but I realize the importance of automation for some tanks.
+This repository will serve as a way to showcase my scripts - using existing tools - in bash in order to automate some processes. I prefer to do processes manually but I realize the importance of automation for some tasks.
 
 
 ## >_Tools
