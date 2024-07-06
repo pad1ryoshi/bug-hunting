@@ -1,17 +1,17 @@
 #!/bin/bash
+# Cores
+red='\e[31m'
+end='\e[0m'
 
-
-echo
-echo
 echo "  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ "
-echo " ||C |||R |||A |||W |||L |||I |||N |||G |||! |||! ||"
+echo -e " ||${red}C${end} |||${red}R${end} |||${red}A${end} |||${red}W${end} |||${red}L${end} |||${red}I${end} |||${red}N${end} |||${red}G${end} |||! |||! ||"
 echo " ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||"
 echo " |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|"
 echo "made by"
 echo
 echo "!"
-echo "!pad1ryoshi"
-echo "!brazillian hacker"
+echo -e " <script>${red}pad1ryoshi${end}</script> "
+echo -e "    brazillian hacker${red}'--${end}"
 echo "!"
 echo
 echo
@@ -19,13 +19,13 @@ echo
 
 # Verificando se as ferramentas Katana e anew existem na máquina
 if ! command -v katana &> /dev/null || ! command -v anew &> /dev/null; then
-    echo "Erro: katana e/ou anew não estão instalados. Por favor, instale-os e tente novamente."
+    echo -e "${red}Erro${end}: katana e/ou anew não estão instalados. Por favor, instale-os e tente novamente."
     exit 1
 fi
 
 # Verificando se o arquivo "subs.txt" existe no diretório
 if [ ! -f subs.txt ]; then
-    echo -e "Erro: subs.txt não encontrado. Por favor, coloque o arquivo subs.txt no diretório atual e tente novamente."
+    echo -e "${red}Erro${end}: subs.txt não encontrado. Por favor, coloque o arquivo subs.txt no diretório atual e tente novamente."
     exit 1
 fi
 
