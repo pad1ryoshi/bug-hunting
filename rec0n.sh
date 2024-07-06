@@ -30,7 +30,7 @@ read -p "Start the recon process? [Y/N]: " yn
 echo
 echo
 
-if [[ ${sn^^} == "Y" ]]; then
+if [[ ${yn^^} == "Y" ]]; then
     read -p "Enter the domain name: " domain
 
     if [ -z "$domain" ]; then
