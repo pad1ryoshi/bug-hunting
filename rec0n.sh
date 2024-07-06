@@ -6,8 +6,7 @@ GREEN='\e[32m'
 YELLOW='\e[33m'
 NC='\e[0m' # Sem cor
 
-echo
-echo
+# Banner
 echo -e "${YELLOW}  ____ ____ ____ ____ ____ ____ ${NC}"
 echo -e "${YELLOW} ||R |||E |||C |||O |||N |||! ||${NC}"
 echo -e "${YELLOW} ||__|||__|||__|||__|||__|||__||${NC}"
