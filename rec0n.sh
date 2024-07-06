@@ -46,7 +46,7 @@ if [[ ${yn^^} == "Y" ]]; then
     echo
 
     echo -e "${GREEN}INITIALIZING ASSETFINDER IN: ${domain}${NC}"
-    assetfinder ${domain} -silent | anew asset.txt
+    assetfinder -subs-only ${domain} -silent | anew asset.txt
     echo
     echo -e "${GREEN}finished assetfinder [X]${NC}"
     echo
