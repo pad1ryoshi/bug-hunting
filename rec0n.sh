@@ -2,10 +2,19 @@
 
 echo
 echo
-echo xXxXx R E C O N xXxXx
-echo -- MADE BY PAD1RYOSHI --
+echo "  ____ ____ ____ ____ ____ ____ "
+echo " ||R |||E |||C |||O |||N |||! ||"
+echo " ||__|||__|||__|||__|||__|||__||"
+echo " |/__\|/__\|/__\|/__\|/__\|/__\|"
+echo "made by"
+echo
+echo "!"
+echo "!pad1ryoshi"
+echo "!brazillian hacker"
+echo "!"
 echo
 echo
+
 
 read -p "Iniciar o processo de recon? [S/N]: " sn
 echo
