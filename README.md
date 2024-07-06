@@ -1,5 +1,5 @@
 # >_bug-hunting
-Repository to submit my scripts and the way I hunt
+Repository that will be used to show my automation scripts for some processes when hunting for bugs.
 
 
 ## >_Who I am | Offensive Security and Bug Hunter
