@@ -3,7 +3,7 @@ Repository that will be used to show my automation scripts for some processes wh
 
 
 ## >_Who I am | Offensive Security and Bug Hunter
-Hey guys, y'all can call me "pad1" or "ryoshi" or "pad1ryoshi" and I'm a hacker from Brazil. I love offensive cybersecurity and I'm constantly learning. I plan to become a excellent bug bounty hunter - maybe one of the best - and fulfil my dreams and goals.
+Hey guys, y'all can call me "pad1" or "ryoshi" or "pad1ryoshi" and I'm a aspiring hacker from Brazil. I love offensive cybersecurity and I'm constantly learning. I plan to become a excellent bug bounty hunter - maybe one of the best - and fulfil my dreams and goals.
 
 
 ## >_This repository
