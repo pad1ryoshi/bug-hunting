@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Definindo cores que serão usadas ao decorrer do script
+RED='\033[0;31m'
 
 echo
 echo
@@ -8,7 +10,6 @@ echo " ||C |||R |||A |||W |||L |||I |||N |||G |||! |||! ||"
 echo " ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||"
 echo " |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|"
 echo "made by"
-echo
 echo "!"
 echo "!pad1ryoshi"
 echo "!brazillian hacker"
@@ -25,7 +26,7 @@ fi
 
 # Verificando se o arquivo "subs.txt" existe no diretório
 if [ ! -f subs.txt ]; then
-    echo -e "Erro: subs.txt não encontrado. Por favor, coloque o arquivo subs.txt no diretório atual e tente novamente."
+    echo -e "'\033[0;31mErro!': subs.txt não encontrado. Por favor, coloque o arquivo subs.txt no diretório atual e tente novamente."
     exit 1
 fi
 
