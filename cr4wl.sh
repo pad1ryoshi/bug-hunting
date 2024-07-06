@@ -1,5 +1,5 @@
 #!/bin/bash
-# Cores
+# colors
 red='\e[31m'
 end='\e[0m'
 
@@ -17,36 +17,36 @@ echo
 echo
 
 
-# Verificando se as ferramentas Katana e anew existem na máquina
+# checking if the Katana and anew tools are installed
 if ! command -v katana &> /dev/null || ! command -v anew &> /dev/null; then
-    echo -e "${red}Erro${end}: katana e/ou anew não estão instalados. Por favor, instale-os e tente novamente."
+    echo -e "${red}Error${end}: Katana and/or anew are not installed. Please install them and try again."
     exit 1
 fi
 
-# Verificando se o arquivo "subs.txt" existe no diretório
+# checking if the file "subs.txt" exists in the directory
 if [ ! -f subs.txt ]; then
-    echo -e "${red}Erro${end}: subs.txt não encontrado. Por favor, coloque o arquivo subs.txt no diretório atual e tente novamente."
+    echo -e "${red}Error${end}: subs.txt not found. Please place the subs.txt file in the current directory and try again."
     exit 1
 fi
 
-# Solicitando a confirmação do usuário e iniciando o crawling
-read -p "Inicializar o processo de crawling? [S/N] " p
-resp=${p^^} # Converter resposta para maiúscula
+# requesting user confirmation and starting crawling
+read -p "Initialize the crawling process? [Y/N] " p
+resp=${p^^} # convert answer to uppercase
 
-if [ "$resp" != "S" ]; then
+if [ "$resp" != "Y" ]; then
     echo "Crawling cancelado pelo usuário."
     exit 0
 fi
 
-echo "OBS: Pressione CTRL + C para parar o crawling!!!"
+echo "NOTE: Press CTRL + C to stop crawling!!!"
 
-# Loop de crawling
-while [ "$resp" == "S" ]; do
-    echo "Iniciando cr4wl1ng"
+# crawling's loop
+while [ "$resp" == "Y" ]; do
+    echo "Starting cr4wl1ng"
     cat subs.txt | katana -jc -kf all -nc -ef png,jpg,jpeg,css,gif,ttf,woff,woff2,svg,eot,js | anew crawl.txt
-    echo "Crawling finalizado! Deseja iniciar novamente? [S/N]"
+    echo "Crawling finished! Do you want to start again? [Y/N]"
     read p
-    resp=${p^^} # Converter resposta para maiúscula
+    resp=${p^^} # convert answer to uppercase
 done
 
-echo "Crawling finalizado!!!"
+echo "Finished crawling!!!"
