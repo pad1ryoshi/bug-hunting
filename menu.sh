@@ -7,29 +7,29 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # no color
 
 # Function for the recon script
-run_rec0n() {
-    echo -e "${GREEN}Starting recon script...${NC}"
-    ./rec0n.sh
+run_recon() {
+    	echo -e "${GREEN}Starting recon script...${NC}"
+    	./recon.sh
 }
 
 # Function for the crawling script
-run_cr4wl() {
-    echo -e "${GREEN}Starting crawling script...${NC}"
-    ./cr4wl.sh
+run_crawl() {
+    	echo -e "${GREEN}Starting crawling script...${NC}"
+    	./crawl.sh
 }
 
-
-# Menu interativo
+# Menu interactivo
 while true; do
     clear
     echo -e "${YELLOW}Select an option:${NC}"
     echo "1) Run recon script"
     echo "2) Run crawling script"
-    echo "3) Leave"
+    echo "3) Run reflect script"
+    echo "4) Leave"
     read -p "Option: " option
     case $option in
-        1) run_rec0n ;;
-        2) run_cr4wl ;;
+        1) run_recon ;;
+        2) run_crawl ;;
         3) echo -e "${GREEN}Leaving...${NC}" ; exit 0 ;;
         *) echo -e "${RED}Invalid option!${NC}" ; sleep 1 ;;
     esac
