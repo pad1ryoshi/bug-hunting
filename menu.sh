@@ -24,8 +24,7 @@ while true; do
     echo -e "${YELLOW}Select an option:${NC}"
     echo "1) Run recon script"
     echo "2) Run crawling script"
-    echo "3) Run reflect script"
-    echo "4) Leave"
+    echo "3) Leave"
     read -p "Option: " option
     case $option in
         1) run_recon ;;
