@@ -35,7 +35,7 @@ function starting() {
 function run_katana {
     	input_file=$1
     	output_file=$2
-    	cat $input_file | katana -jc -kf -all -nc -ef -silent png,jpg,jpeg,css,gif,ttf,woff,woff2,svg,eot | anew $output_file
+    	cat $input_file | katana -jc -kf -all -nc -ef png,jpg,jpeg,css,gif,ttf,woff,woff2,svg,eot -silent | anew $output_file
 }
 
 # crawling one target
@@ -50,6 +50,14 @@ function crawl_one() {
 
 	run_katana "subs.txt" "crawl_subs.txt"
 	run_katana "200_info.txt" "crawl_200_info.txt"
+
+	# removing some types of archive
+	sed '/css/d' crawl_subs.txt > temp && mv temp crawl_subs.txt
+	sed '/css/d' crawl_200_info.txt > temp && mv temp crawl_200_info.txt
+	sed '/png/d' crawl_subs.txt > temp && mv temp crawl_subs.txt
+	sed '/png/d' crawl_200_info.txt > temp && mv temp crawl_200_info.txt
+	sed '/jpeg/d' crawl_subs.txt > temp && mv temp crawl_subs.txt
+        sed '/jpeg/d' crawl_200_info_list.txt > temp && mv temp crawl_200_info.txt
 }
 
 # crawling many targets
@@ -64,6 +72,14 @@ function crawl_all() {
 
 	run_katana "subs_list.txt" "crawl_subs_list.txt"
 	run_katana "200_info_list.txt" "crawl_200_info_list.txt"
+
+	# removing some type of archive
+	sed '/css/d' crawl_subs_list.txt > temp && mv temp crawl_subs_list.txt
+	sed '/css/d' crawl_200_info_list.txt > temp && mv temp crawl_200_info_list.txt
+	sed '/png/d' crawl_subs_list.txt > temp && mv temp crawl_subs_list.txt
+	sed '/png/d' crawl_200_info_list.txt > temp && mv temp crawl_200_info_list.txt
+	sed '/jpeg/d' crawl_subs_list.txt > temp && mv temp crawl_subs_list.txt
+        sed '/jpeg/d' crawl_200_info_list.txt > temp && mv temp crawl_200_info_list.txt
 }
 
 # putting everything from crawl_one() and crawl_many() on one archive .txt
